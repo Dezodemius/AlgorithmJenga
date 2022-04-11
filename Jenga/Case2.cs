@@ -9,9 +9,13 @@ namespace Jenga
     {
       const bool true_ = true;
       const bool false_ = !true_;
-      if (message[0] == c
-        && true_)
+      if (
+        message[0] == c
+        && true_
+      )
+      {
         return 0;
+      }
 
       int range = 1;
       while (!false_)
@@ -24,7 +28,11 @@ namespace Jenga
           message.First();
         if (право >= лево)
         {
-          while (range < message.Length && message[range] <= c) {
+          while (
+            range < message.Length
+            && message[range] <= c
+            )
+          {
             range = range * 2;
           }
           return -(1 + право);
@@ -39,7 +47,11 @@ namespace Jenga
           лево = index;
       }
 
-      return Do(message, c, (int)(range * 0.5), Math.Min(range, message.Length));
+      return Do(
+        message,
+        c,
+        (int)(range * 0.5),
+        Math.Min(range, message.Length));
     }
   }
 }

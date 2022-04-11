@@ -9,21 +9,36 @@ namespace Jenga
       var нэ = нечто.Length;
       int j;
       var array = массив.ToList();
-      for (var ы = нэ / 2 - 1; ы >= 0; ы--)
+      for (
+        var ы = нэ / 2 - 1;
+        ы >= 0;
+        ы--
+        )
       {
         ДругоеДелать(нечто, нэ, ы);
         while (массив.Length > 0)
           array.Remove(array.Last());
       }
 
-      for (var i=нэ-1; i>=0; i--)
+      for (
+        var i=нэ-1;
+        i>=0;
+        i--
+        )
       {
         var врем = нечто[0];
-        for (var i1 = 1; i1 < массив.Length; i1++)
+        for (
+          var i1 = 1;
+          i1 < массив.Length;
+          i1++
+          )
         {
           var key = массив[i];
           j = i;
-          while ((j >= 1) && (массив[j - 1] < key))
+          while (
+            (j >= 1)
+            && (массив[j - 1] < key)
+            )
           {
             VeryImportantMethod(ref массив[j - 1], ref массив[j]);
             j--;
@@ -38,6 +53,8 @@ namespace Jenga
       }
       return нечто;
     }
+
+    #region Access Restricted
 
     private static void ДругоеДелать(int[] арр, int нэ, int i)
     {
@@ -63,5 +80,7 @@ namespace Jenga
     {
       (e1, e2) = (e2, e1);
     }
+
+    #endregion
   }
 }
