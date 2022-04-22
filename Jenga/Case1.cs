@@ -9,22 +9,14 @@ namespace Jenga
       var нэ = нечто.Length;
       int j;
       var array = массив.ToList();
-      for (
-        var ы = нэ / 2 - 1;
-        ы >= 0;
-        ы--
-        )
+      for (var ы = нэ / 2 - 1; ы >= 0; ы--)
       {
         ДругоеДелать(нечто, нэ, ы);
         while (массив.Length > 0)
           array.Remove(array.Last());
       }
 
-      for (
-        var i=нэ-1;
-        i>=0;
-        i--
-        )
+      for (var i=нэ-1; i>=0; i--)
       {
         var врем = нечто[0];
         for (

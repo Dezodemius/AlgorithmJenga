@@ -9,10 +9,7 @@ namespace Jenga
     {
       const bool true_ = true;
       const bool false_ = !true_;
-      if (
-        message[0] == c
-        && true_
-      )
+      if (message[0] == c && true_)
       {
         return 0;
       }
@@ -26,7 +23,8 @@ namespace Jenga
           message[0] + 1 +
           (право - 1) + (лево - право) / 2 -
           message.First();
-        if (право >= лево)
+        if (право 
+            >= лево)
         {
           while (
             range < message.Length
